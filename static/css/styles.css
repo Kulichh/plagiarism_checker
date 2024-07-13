@@ -1,0 +1,101 @@
+body {
+    background-color: #ecf8ff; /* новий колір фону */
+    color: white;
+    font-family: 'Karla', sans-serif; /* Шрифт Karla */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden; /* Забороняємо горизонтальну прокрутку */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Вирівнювання вліво */
+    padding: 20px;
+    width: 100%;
+    background-color: #6a0dad; /* Фіолетовий колір */
+    box-sizing: border-box; /* Враховуємо padding в ширині елементу */
+}
+
+.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box; /* Враховуємо padding в ширині елементу */
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: black; /* Зміна кольору тексту на чорний */
+}
+
+textarea {
+    width: 80%;
+    max-width: 800px; /* Максимальна ширина для textarea */
+    padding: 10px;
+    margin-bottom: 10px;
+    color: black; /* Зміна кольору тексту на чорний */
+    box-sizing: border-box; /* Враховуємо padding в ширині елементу */
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px; /* Округлі кути кнопки */
+    background-color: #6a0dad; /* Фіолетовий колір */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+    input[type="file"]::-webkit-file-upload-button {
+        visibility: hidden;
+    }
+
+    input[type="file"]::before {
+        content: 'Choose file'; /* Текст кнопки */
+        display: inline-block;
+        background: #6a0dad;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    input[type="file"]:hover::before {
+        background: darkviolet;
+    }
+
+button {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 10px; /* Округлі кути кнопки */
+}
+
+    button:hover {
+        background-color: darkviolet;
+    }
