@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plagiarism Check Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Company Logo" class="logo">
+        <h1>PureText</h1>
+    </header>
+    <main>
+        <h2>Plagiarism Check Result</h2>
+        <div>
+            <p>Plagiarism Score: {{ result['plagiarism_score'] }}%</p>
+            <p>Details: {{ result['details'] }}</p>
+        </div>
+        <a href="{{ url_for('index') }}">Check another text</a>
+    </main>
+</body>
+</html>
