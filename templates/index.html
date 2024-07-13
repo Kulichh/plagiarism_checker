@@ -3,35 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plagiarism Checker</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 50px;
-            text-align: center;
-        }
-
-        input[type="file"] {
-            margin: 20px 0;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-        }
-
-        #result {
-            margin-top: 20px;
-        }
-    </style>
+    <title>PureText - Plagiarism Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet"> <!-- Підключення шрифту Karla -->
 </head>
 <body>
-    <h1>Plagiarism Checker</h1>
-    <form id="uploadForm">
-        <input type="file" id="fileInput" />
-        <button type="button" onclick="uploadFile()">Upload</button>
-    </form>
-    <div id="result"></div>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <header>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Company Logo" class="logo">
+        <h1>PureText</h1>
+    </header>
+    <main>
+        <h2>Fast and accurate plagiarism checker</h2>
+        <form action="/check_plagiarism" method="post" enctype="multipart/form-data">
+            <textarea name="text" rows="10" placeholder="Type or paste your text here"></textarea>
+            <br>
+            <input type="file" name="file">
+            <br>
+            <button type="submit">Check</button>
+        </form>
+    </main>
 </body>
 </html>
